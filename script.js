@@ -69,17 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 void audioPlayerContainer.offsetWidth;
                 audioPlayerContainer.classList.add('visible');
             }, 800);
-            
-            // Start the audio
-            if (!isPlaying) {
-                audio.play().catch(error => {
-                    console.error("Audio playback failed:", error);
-                });
-                icon.classList.remove('fa-play');
-                icon.classList.add('fa-pause');
-                playBtn.classList.add('playing');
-                isPlaying = true;
-            }
         }, 500); // 500ms fade out transition
     });
     
